@@ -13,6 +13,7 @@ public class Minutnik {
         TimerThread realTimeTimer = new TimerThread("Minutnik w czasie rzeczywistym", totalTimeInSeconds);
         TimerThread delayedTimer = new TimerThread("Minutnik z opóźnieniem", totalTimeInSeconds, 2000);
 
+        //
         realTimeTimer.start();
         delayedTimer.start();
     }
