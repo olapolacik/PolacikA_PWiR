@@ -1,21 +1,34 @@
+package Laboratorium01;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Minutnik {
+public class Zadanie2 {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-        System.out.println("Podaj ilosc sekund: ");
-
-        // czas w sekundach podany przez uzytkownika
-        int totalTimeInSeconds = sc.nextInt(); 
         
-        // Tworzenie i uruchamianie wątków minutników
-        TimerThread realTimeTimer = new TimerThread("Minutnik w czasie rzeczywistym", totalTimeInSeconds);
-        TimerThread delayedTimer = new TimerThread("Minutnik z opóźnieniem", totalTimeInSeconds, 2000);
+        try {
+            System.out.println("Podaj ilość sekund (liczba całkowita większa niż 0): ");
 
-        //
-        realTimeTimer.start();
-        delayedTimer.start();
+            // Czas w sekundach podany przez użytkownika
+            int totalTimeInSeconds = sc.nextInt();
+
+            if (totalTimeInSeconds <= 0) {
+                System.out.println("Podaj liczbę całkowitą większą niż 0.");
+                return;
+            }
+
+            // Tworzenie i uruchamianie wątków minutników
+            TimerThread realTimeTimer = new TimerThread("Minutnik w czasie rzeczywistym", totalTimeInSeconds);
+            TimerThread delayedTimer = new TimerThread("Opóźniony minutnik", totalTimeInSeconds, 2000);
+
+            realTimeTimer.start();
+            delayedTimer.start();
+        } catch (InputMismatchException e) {
+            System.out.println("Nieprawidłowy format danych. Podaj liczbę całkowitą.");
+        } finally {
+            sc.close(); // Ważne, aby zamknąć Scanner
+        }
     }
 }
 
@@ -39,7 +52,6 @@ class TimerThread extends Thread {
     @Override
     public void run() {
         System.out.println(name + " rozpoczyna odliczanie...");
-        int remainingTime = totalTimeInSeconds;
 
         try {
             Thread.sleep(delay); // Opcjonalne opóźnienie
@@ -47,6 +59,7 @@ class TimerThread extends Thread {
             e.printStackTrace();
         }
 
+        int remainingTime = totalTimeInSeconds;
         while (remainingTime > 0) {
             System.out.println(name + ": " + remainingTime + " sek.");
             remainingTime--;
