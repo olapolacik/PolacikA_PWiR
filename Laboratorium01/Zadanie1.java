@@ -2,19 +2,6 @@ package Laboratorium01;
 
 import java.util.Scanner;
 
-public class Zadanie1 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Podaj ilość sekund: ");
-
-        // Czas w sekundach podany przez użytkownika
-        int totalTimeInSeconds = sc.nextInt();
-
-        // Tworzenie i uruchamianie wątku minutnika
-        TimerThread timer = new TimerThread("Minutnik", totalTimeInSeconds);
-        timer.start();
-    }
-}
 
 class TimerThread extends Thread {
     private String name;
@@ -42,5 +29,17 @@ class TimerThread extends Thread {
         }
 
         System.out.println(name + " zakończył odliczanie.");
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Podaj ilość sekund: ");
+
+        // Czas w sekundach podany przez użytkownika
+        int totalTimeInSeconds = sc.nextInt();
+
+        // Tworzenie i uruchamianie wątku minutnika
+        TimerThread timer = new TimerThread("Minutnik", totalTimeInSeconds);
+        timer.start();
     }
 }
