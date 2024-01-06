@@ -1,27 +1,30 @@
-import java.util.Random;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 class Talia {
 
-    private int[] talia;
-    private static int walet = 2;
-    private static int krol = 4;
-    private static int dama = 3;
-    private static int As = 11;
+    private static int[] talia = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11,
+                                  2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
 
-    public Talia() {
-        talia = new int[]{2, 3, 4, 5, 6, 7, 8, 9, 10, walet, dama, krol, As, 2, 3, 4, 5, 6, 7, 8, 9, 10, walet, dama, krol, As,
-                2, 3, 4, 5, 6, 7, 8, 9, 10, walet, dama, krol, As, 2, 3, 4, 5, 6, 7, 8, 9, 10, walet, dama, krol, As};
-            }
+    private static List<Integer> taliaList;
 
-    //mozna wykorzystac liste i metode Shuffle()
+    static {
+        taliaList = new ArrayList<>();
+        for (int value : talia) {
+            taliaList.add(value);
+        }
+        Collections.shuffle(taliaList);
+    }
 
-    public int losujKarte() {
-        Random rand = new Random();
-        int index = rand.nextInt(talia.length);
-        int karta = talia[index];
-        // Usuń wylosowaną kartę z talii
-        talia[index] = talia[talia.length - 1];
-        talia[talia.length - 1] = 0; // Zeruj ostatni element
-        return karta;
+    public static synchronized int pobierzKarte() {
+        if (!taliaList.isEmpty()) {
+            return taliaList.remove(0);
+        } else {
+            return -1; // Zwracamy -1 gdy talia jest pusta
+        }
     }
 }
+
+

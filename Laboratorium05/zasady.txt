@@ -7,7 +7,7 @@
 np. 5 graczy gra, 4 odpadnie, wygrywa ten co zostal.
 Losowosc, instrukcje warunkowe
 
-class Talia{
+class Laboratorium05.Talia{
 
     //pola kart 
 
@@ -18,7 +18,7 @@ class Talia{
     static int dama = 3;
     static int As = 11;
 
-    public Talia(){   
+    public Laboratorium05.Talia(){
     }
     if(suma <= 10){
         losujKarte();
@@ -46,7 +46,7 @@ class Talia{
     //zmienna boolean isWin ? 
 }
 
-1. Klasa reprezentujaca Talia, tablica 52 el. wartosci odpowiadaja punktom
+1. Klasa reprezentujaca Laboratorium05.Talia, tablica 52 el. wartosci odpowiadaja punktom
 W oczko gra się talią od 2 do asa.
 Punktacja:
 Karty 2 do 10 mają wartość równą wartości karty 1 =1 2=2....

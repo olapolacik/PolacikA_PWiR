@@ -4,7 +4,34 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "WindaWielowatkowa",
+            "request": "launch",
+            "mainClass": "Laboratorium06.WindaWielowatkowa",
+            "projectName": "PolacikA_PWiR_7948dc82"
+        },
+        {
+            "type": "java",
+            "name": "Gracz",
+            "request": "launch",
+            "mainClass": "Gracz",
+            "projectName": "PolacikA_PWiR_7948dc82"
+        },
+        {
+            "type": "java",
+            "name": "Gracz",
+            "request": "launch",
+            "mainClass": "Gracz",
+            "projectName": "PolacikA_PWiR"
+        },
+        {
+            "type": "java",
+            "name": "Etykieta",
+            "request": "launch",
+            "mainClass": "etykieta.Etykieta",
+            "projectName": "PolacikA_PWiR_7948dc82"
+        },
         {
             "type": "java",
             "name": "Client",

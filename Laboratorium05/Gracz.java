@@ -1,40 +1,52 @@
-class Gracz implements Runnable {
+class Gracz extends Thread {
 
-    private static boolean isGameOn = true;
-    private static String winningPlayer = null;  // Variable to track the winning player
-    private String nazwa;
-    private int suma = 0;
+    private static boolean koniecGry = false;
+    private static Object lock = new Object();
 
-    public Gracz(String nazwa) {
-        this.nazwa = nazwa;
+    private String nazwaGracza;
+    private int sumaPunktow = 0;
+
+    public Gracz(String nazwaGracza) {
+        this.nazwaGracza = nazwaGracza;
     }
 
     @Override
     public void run() {
-        Talia talia = new Talia();
-        while (isGameOn) {
-            int karta = talia.losujKarte();
-            System.out.println(nazwa + " dobiera kartę: " + karta);
-            suma += karta;
+        while (!koniecGry) {
+            synchronized (lock) {
+                if (!koniecGry) {
+                    int karta = Talia.pobierzKarte();
+                    if (karta != -1) {
+                        System.out.println(nazwaGracza + " dobiera kartę o wartości: " + karta);
+                        sumaPunktow += karta;
 
-            if (suma == 21) {
-                System.out.println(nazwa + " osiągnął wynik 21! Wygrywa!");
-                winningPlayer = nazwa;  // Set the winning player
-                isGameOn = false;
-            } else if (suma > 21) {
-                System.out.println(nazwa + " przekroczył 21 punktów. Przegrywa.");
-                isGameOn = false;
+                        if (sumaPunktow == 21) {
+                            System.out.println(nazwaGracza + " osiągnął/a 21 punktów! Wygrywa!");
+                            koniecGry = true;
+                        } else if (sumaPunktow > 21) {
+                            System.out.println(nazwaGracza + " przekroczył/a 21 punktów. Odpada z gry.");
+                            koniecGry = true;
+                        }
+                    } else {
+                        System.out.println("Talia jest pusta. Koniec gry.");
+                        koniecGry = true;
+                    }
+                }
             }
 
             try {
-                Thread.sleep(500); // Symulacja opóźnienia między dobieraniem kart
+                Thread.sleep(1000); // Czekamy przed dobieraniem kolejnej karty
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+    }
 
-        if (winningPlayer != null && winningPlayer.equals(nazwa)) {
-            System.out.println(nazwa + " wygrał grę!");
+    public static void main(String[] args) {
+        int liczbaGraczy = 5;
+
+        for (int i = 1; i <= liczbaGraczy; i++) {
+            new Gracz("Gracz " + i).start();
         }
     }
 }
