@@ -4,21 +4,6 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
-        {
-            "type": "java",
-            "name": "Client",
-            "request": "launch",
-            "mainClass": "TicTacToe.Client",
-            "projectName": "PolacikA_PWiR_7948dc82"
-        },
-        {
-            "type": "java",
-            "name": "Zad1",
-            "request": "launch",
-            "mainClass": "Kolokwium.Zad1",
-            "projectName": "PolacikA_PWiR_7948dc82"
-        },
         {
             "type": "java",
             "name": "Main",

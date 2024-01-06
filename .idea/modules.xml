@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Etykieta/Etykieta.iml" filepath="$PROJECT_DIR$/Etykieta/Etykieta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratorium02_20.10.2023/Lab02_z1/Lab02_z1.iml" filepath="$PROJECT_DIR$/Laboratorium02_20.10.2023/Lab02_z1/Lab02_z1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratorium02_20.10.2023/Lab02_z3/Lab02_z3.iml" filepath="$PROJECT_DIR$/Laboratorium02_20.10.2023/Lab02_z3/Lab02_z3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratorium02_20.10.2023/Lab02_z4/Lab02_z4.iml" filepath="$PROJECT_DIR$/Laboratorium02_20.10.2023/Lab02_z4/Lab02_z4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratorium02_20.10.2023/Lab02_z6/Lab02_z6.iml" filepath="$PROJECT_DIR$/Laboratorium02_20.10.2023/Lab02_z6/Lab02_z6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PolacikA_PWiR.iml" filepath="$PROJECT_DIR$/PolacikA_PWiR.iml" />
+    </modules>
+  </component>
+</project>
