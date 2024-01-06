@@ -19,7 +19,6 @@ public class Client
     private char player;
 
 
-
     public Client(char player) {
         this.player = player;
         frame = new JFrame("Gracz: " + player);
