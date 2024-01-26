@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ClientRMIGUI",
+            "request": "launch",
+            "mainClass": "client.ClientRMIGUI",
+            "projectName": "RMIChatProject_424a8780"
+        },
+        {
+            "type": "java",
+            "name": "ChatServer",
+            "request": "launch",
+            "mainClass": "server.ChatServer",
+            "projectName": "RMIChatProject_424a8780"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ClientRMIGUI",
+            "request": "launch",
+            "mainClass": "client.ClientRMIGUI",
+            "projectName": "RMIChat_5273e269"
+        },
+        {
+            "type": "java",
+            "name": "ChatServer",
+            "request": "launch",
+            "mainClass": "server.ChatServer",
+            "projectName": "RMIChat_5273e269"
+        }
+    ]
+}
