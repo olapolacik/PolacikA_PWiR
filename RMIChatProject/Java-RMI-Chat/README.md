@@ -18,16 +18,15 @@ Prosty wieloosobowy chat z interfejsem graficznym zrealizowany w języku Java, w
 
 ### Klient
 1. Skompiluj plik `ChatRMIGUI.java`:
-    javac Client4.java
+    ```
+    javac ClientRMIGUI.java
     ```
 
 2. Uruchom klienta lub kilku klientów:
-    javac ClientRMIGUI.java
     ```
     java ClientRMIGUI 
     ```
-    (raz lub więcej w zależności ile chcemy odpalić klientów)
-    ```
+    (raz lub więcej)
 
 ## Autor
 - Aleksandra Połacik, Informatyka 3 rok
