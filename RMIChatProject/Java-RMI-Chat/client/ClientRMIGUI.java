@@ -31,10 +31,6 @@ import javax.swing.border.Border;
 import design.CustomColor;
 
 
-/**
- * @author Aleksandra Połacik
- */
-
 public class ClientRMIGUI extends JFrame implements ActionListener {
 
     private static final long serialVersionUID = 1L;

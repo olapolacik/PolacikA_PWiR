@@ -7,10 +7,12 @@ Prosty wieloosobowy chat z interfejsem graficznym zrealizowany w języku Java, w
 
 ### Serwer
 1. Skompiluj plik (znajdujacy sie w folderze server)`ChatServer.java`:
+    ```
     javac ChatServer.java
     ```
 
 2. Uruchom serwer:
+    ```
     java ChatServer
     ```
 
@@ -23,6 +25,7 @@ Prosty wieloosobowy chat z interfejsem graficznym zrealizowany w języku Java, w
     javac ClientRMIGUI.java
     ```
     java ClientRMIGUI 
+    ```
     (raz lub więcej w zależności ile chcemy odpalić klientów)
     ```
 
