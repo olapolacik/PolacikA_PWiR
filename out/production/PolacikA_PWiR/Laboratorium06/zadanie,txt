@@ -1,8 +1,0 @@
-Winda w wie»owcu umo»liwia jednoczesne przewo»enie ograniczonej liczby osób,
-zaªó»my N. Osoby przebywaj¡ce w wie»owcu korzystaj¡ z windy, przemieszczaj¡c si¦ pomi¦dzy pi¦trami. Osoba przebywa losowy czas poza wind¡, nast¦pnie
-korzystaj¡c w windy przemieszcza si¦ na losowe pietro i tak w kółko.
-Napisz program wielow¡tkowy, który symulowaªby zachowanie pewnej liczby
-osób (wi¦kszej od 3N) i trzech wind. Na ekranie powinny pojawia¢ si¦ komunikaty informuj¡ce o aktualnym stanie wszystkich w¡tków (w¡tków reprezentuj¡-
-cych poszczególne osoby i w¡tku reprezentuj¡cego winde).
-Problem: ograniczona liczba osob, pierwszenstwo maja soosby wychodzace z windy.
-Watkiem jest czlowiek, wsiada losowe pietro, wysiada czeka, wsiada itd...
